@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><Link to="/login">Login</Link></li>
     </>
     return (
-        <div className="navbar bg-base-100 px-20">
+        <div className="navbar bg-base-100 px-20 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Navbar = () => {
                         {navMenu}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl">CycleHunt</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

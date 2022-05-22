@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import Blogs from './pages/Blogs/Blogs';
 import Login from './pages/Shared/Login';
 import Navbar from './pages/Shared/Navbar'
+import Footer from './pages/Shared/Footer';
+import ComingSoon from './pages/Shared/ComingSoon';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Bottom Bracket",
+        "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": ""
+    },
+    {
+        "id": 2,
+        "name": "Bottom Bracket",
+        "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": ""
+    },
+    {
+        "id": 3,
+        "name": "Bottom Bracket",
+        "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": ""
+    }
+]
