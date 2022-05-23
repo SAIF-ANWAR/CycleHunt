@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PrimaryButton from '../../Shared/PrimaryButton';
 
 const Tool = ({ tool }) => {
@@ -13,7 +14,7 @@ const Tool = ({ tool }) => {
                 <p>Available Quantity: {quantity} </p>
                 <p> MOQ: {minOrder} </p>
                 <div className="card-actions justify-end">
-                    <PrimaryButton>Order Now</PrimaryButton>
+                    <Link to="/purchase"><PrimaryButton>Order Now</PrimaryButton></Link>
                 </div>
             </div>
         </div>

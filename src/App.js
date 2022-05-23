@@ -7,6 +7,7 @@ import Login from './pages/Shared/Login';
 import Navbar from './pages/Shared/Navbar'
 import Footer from './pages/Shared/Footer';
 import ComingSoon from './pages/Shared/ComingSoon';
+import Purchase from './pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/purchase' element={<Purchase></Purchase>}></Route>
         <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
       </Routes>
       <Footer></Footer>
