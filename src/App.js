@@ -9,8 +9,6 @@ import Footer from './pages/Shared/Footer';
 import ComingSoon from './pages/Shared/ComingSoon';
 import Purchase from './pages/Purchase/Purchase';
 import SignUp from './pages/Shared/SignUp';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import RequireAuth from './pages/Shared/RequireAuth';
 
 function App() {
@@ -30,7 +28,6 @@ function App() {
         <Route path='/purchase' element={<Purchase></Purchase>}></Route>
         <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
       </Routes>
-      <ToastContainer />
       <Footer></Footer>
     </div>
   );

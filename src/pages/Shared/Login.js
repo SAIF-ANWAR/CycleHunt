@@ -17,7 +17,6 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
     if (loading || gLoading) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { updateProfile } from 'firebase/auth';
 import Loading from './Loading';
 import banner from '../../photos/banner-1.jpg'
@@ -28,19 +28,21 @@ const SignUp = () => {
     if (error || gError) {
         window.alert(`{error.message}`)
     }
-
+    if (user || gUser) {
+        toast.success("Created account successfully !")
+    }
     const onSubmit = async data => {
         if (data.password !== data.confirmPassword) {
             window.alert("Password didn't match")
         }
         else {
             await createUserWithEmailAndPassword(data.email, data.password)
-            await updateProfile({ displayName: data.name })
-            toast.success("Created account successfully !")
+            await updateProfile({ displayName: data?.name })
             navigate("/")
         }
-        console.log(data)
+        // console.log(data)
     };
+    // console.log(user)
 
     return (
         <div style={{ background: `url(${banner})`, backgroundSize: 'cover' }} className='h-screen flex flex-col-1 justify-center items-center'>
