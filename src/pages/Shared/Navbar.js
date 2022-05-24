@@ -7,6 +7,7 @@ import Loading from './Loading';
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
+    console.log(user)
 
     const logOut = () => {
         signOut(auth)
@@ -17,9 +18,9 @@ const Navbar = () => {
 
     const navMenu = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li> {user && <Link to="/dashboard">Dashboard</Link>} </li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li> {user && <> <p>{user.displayName}</p> </>} </li>
+        <li> {user && <p className='font-bold'>{user?.displayName}</p>} </li>
         <li>{user ? <button onClick={logOut} className="btn btn-ghost">Log Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (

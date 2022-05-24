@@ -8,28 +8,139 @@
         "minOrder": 20,
         "price": 20,
         "payment": "",
-        "availableQuantity": ""
+        "availableQuantity": "",
+        "stock": ""
     },
     {
         "id": 2,
-        "name": "Bottom Bracket",
-        "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
+        "name": "Cassette",
+        "img": "https://i.ibb.co/qNzKR6B/cassette.jpg",
         "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
         "quantity": 100,
         "minOrder": 20,
         "price": 20,
         "payment": " ",
-        "availableQuantity": ""
+        "availableQuantity": "",
+        "stock": ""
     },
     {
         "id": 3,
-        "name": "Bottom Bracket",
-        "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
+        "name": "Chain",
+        "img": "https://i.ibb.co/2jmBpB2/chain.jpg",
         "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
         "quantity": 100,
         "minOrder": 20,
         "price": 20,
         "payment": "",
-        "availableQuantity": ""
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 12,
+        "name": "Charger",
+        "img": "https://i.ibb.co/mv7DHZj/charger.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 4,
+        "name": "Disc Brake",
+        "img": "https://i.ibb.co/RCrvkyB/discbrake.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 5,
+        "name": "Disk Rotor",
+        "img": "https://i.ibb.co/NZmhHDm/discrotor.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 6,
+        "name": "Frame",
+        "img": "https://i.ibb.co/n1SXC4M/frame.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 7,
+        "name": "Pedal",
+        "img": "https://i.ibb.co/BZjS630/pedal.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 8,
+        "name": "Pedal Cleets",
+        "img": "https://i.ibb.co/qdx4qfW/pedal-cleets.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 9,
+        "name": "Saddle",
+        "img": "https://i.ibb.co/Bs3Bhj6/saddle.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 10,
+        "name": "Tyre",
+        "img": "https://i.ibb.co/xjY4DyL/tyre.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
+    },
+    {
+        "id": 11,
+        "name": "Zipp",
+        "img": "https://i.ibb.co/Th1W7Qg/zipp.jpg",
+        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "quantity": 100,
+        "minOrder": 20,
+        "price": 20,
+        "payment": "",
+        "availableQuantity": "",
+        "stock": ""
     }
 ]

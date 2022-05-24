@@ -2,10 +2,10 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { updateProfile } from 'firebase/auth';
 import Loading from './Loading';
-import banner from '../../photos/banner-1.jpg'
+import banner from '../../photos/banner-2.jpg'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -21,11 +21,12 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    if (loading || gLoading) {
+    if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
-    if (error || gError) {
+    if (error || gError || updateError) {
         window.alert(`{error.message}`)
     }
     if (user || gUser) {
@@ -40,7 +41,7 @@ const SignUp = () => {
             await updateProfile({ displayName: data?.name })
             navigate("/")
         }
-        // console.log(data)
+        console.log(data)
     };
     // console.log(user)
 
