@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PrimaryButton from '../../Shared/PrimaryButton';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Tool = ({ tool }) => {
-    const { name, description, quantity, minOrder, img, price } = tool
+    const { _id, name, description, quantity, minOrder, img, price } = tool
+    const navigate = useNavigate()
+
+    const handleOrder = (id) => {
+
+        navigate(`/purchase/${id}`)
+
+    }
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img className='w-48 py-4' src={img} alt="Shoes" /></figure>
@@ -11,10 +17,10 @@ const Tool = ({ tool }) => {
                 <h2 className="card-title"> {name} </h2>
                 <p> {description} </p>
                 <p>Price/piece: ${price} </p>
-                <p>Available Quantity: {quantity} </p>
+                <p>Available Quantity: {quantity <= 0 ? "Stoc Out" : quantity} </p>
                 <p> MOQ: {minOrder} </p>
                 <div className="card-actions justify-end">
-                    <Link to="/purchase"><PrimaryButton>Order Now</PrimaryButton></Link>
+                    <button className='btn btn-outline' onClick={() => handleOrder(tool._id)}>Order Now</button>
                 </div>
             </div>
         </div>
