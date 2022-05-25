@@ -15,13 +15,13 @@ const Purchase = () => {
     const { id } = useParams()
     // const [product, setProduct] = useState({})
     // useEffect(() => {
-    //     const url = `http://localhost:5000/parts/${id}`
+    //     const url = `https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`
     //     fetch(url)
     //         .then(res => res.json())
     //         .then(data => setProduct(data))
     // }, [id])
 
-    const { data: product, isLoading, refetch } = useQuery('available', () => fetch(`http://localhost:5000/parts/${id}`).then(res => res.json()))
+    const { data: product, isLoading, refetch } = useQuery('available', () => fetch(`https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`).then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -38,7 +38,7 @@ const Purchase = () => {
         const data = {
             productName, buyer, email, orderedQuantity, address
         }
-        const url = `http://localhost:5000/orders`
+        const url = `https://fathomless-brushlands-38249.herokuapp.com/orders`
         fetch(url, {
             method: "POST",
             headers: {
@@ -56,7 +56,7 @@ const Purchase = () => {
                 }
 
                 else {
-                    const url = `http://localhost:5000/parts/${id}`
+                    const url = `https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`
                     fetch(url, {
                         method: "PUT",
                         headers: {
@@ -125,7 +125,7 @@ const Purchase = () => {
                                         <input type="text" name="address" placeholder="Address" className="input input-bordered" />
                                     </div>
                                     <div className="form-control mt-5">
-                                        <PrimaryButton>Order</PrimaryButton>
+                                        <PrimaryButton >Order</PrimaryButton>
                                     </div>
                                     <ToastContainer />
                                 </div>

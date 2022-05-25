@@ -6,12 +6,12 @@ import Tool from './Tool';
 
 const Tools = () => {
     const [tools, setTools] = useProduct()
-    // const { data: tools, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/parts')).then(res => res.json())
+    // const { data: tools, isLoading, refetch } = useQuery('users', () => fetch('https://fathomless-brushlands-38249.herokuapp.com/parts')).then(res => res.json())
     // // if (isLoading) {
     //     return <Loading></Loading>
     // }
     // useEffect(() => {
-    //     fetch('http://localhost:5000/parts')
+    //     fetch('https://fathomless-brushlands-38249.herokuapp.com/parts')
     //         .then(res => res.json())
     //         .then(data => setTools(data))
     // }, [])
