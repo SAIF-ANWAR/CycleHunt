@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import MyOrder from './MyOrder';
 import Loading from '../Shared/Loading';
 import { useQuery } from 'react-query';
+import OrdereCancelModal from './OrderCancelModal';
 
 const MyOrders = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -24,6 +25,10 @@ const MyOrders = () => {
             {
                 orders?.map(order => <MyOrder key={order._id} order={order} refetch={refetch}></MyOrder>)
             }
+            {
+                orders?.map(order => <OrdereCancelModal key={order._id} order={order} refetch={refetch}></OrdereCancelModal>)
+            }
+            {/* {orders && <OrdereCancelModal orders={orders} refetch={refetch}  ></OrdereCancelModal>} */}
         </div>
     );
 };

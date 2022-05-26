@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import OrdereCancelModal from './OrderCancelModal';
 
 const MyOrder = ({ order, refetch }) => {
 
@@ -22,26 +24,27 @@ const MyOrder = ({ order, refetch }) => {
             })
     }
     const handleDelete = (id) => {
-        const proceed = window.confirm("Are You sure")
-        if (proceed) {
-            fetch(`https://fathomless-brushlands-38249.herokuapp.com/orders/${id}`, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.acknowledged === true) {
-                        toast.success("Order Cancelled")
-                    }
-                    refetch()
-                    console.log(data)
-                })
-        }
+
+        // const proceed = window.confirm("Are You sure")
+        // if (proceed) {
+        //     fetch(`https://fathomless-brushlands-38249.herokuapp.com/orders/${id}`, {
+        //         method: "DELETE"
+        //     })
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             if (data.acknowledged === true) {
+        //                 toast.success("Order Cancelled")
+        //             }
+        //             refetch()
+        //             console.log(data)
+        //         })
+        // }
 
     }
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
-                <figure><img className='w-48 py-4' src={order?.image} alt="Shoes" /></figure>
+                <figure><img className='w-36 py-4 max-h-[11rem] min-h-[11rem] lg:max-h-[15rem] lg:min-h-[15rem]' src={order?.image} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">
                         Order Summary
@@ -54,8 +57,9 @@ const MyOrder = ({ order, refetch }) => {
                     <p>Payment Status: {order?.payment ? order?.payment : "Pending"} </p>
                     <p>Shipment : {order?.payment === "Paid" ? "On Process" : "Pendnig for payment"}</p>
                     <div class="card-actions justify-end">
-                        <button onClick={() => handlePay(order?._id)} class="btn btn-sm">Pay</button>
-                        <button onClick={() => handleDelete(order?._id)} disabled={order?.payment === "Paid"} class="btn btn-sm">Cancel Order</button>
+                        {order?.payment === "Paid" ? <Link to="/trackOrder" class="btn btn-sm">Track Order</Link> : <button onClick={() => handlePay(order?._id)} class="btn btn-sm">Pay</button>}
+                        <label for="cancel-modal" disabled={order?.payment === "Paid"} class="btn btn-sm modal-button">Cancel Order</label>
+
                     </div>
                 </div>
             </div>

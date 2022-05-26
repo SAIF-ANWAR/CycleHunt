@@ -18,6 +18,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AllUsers from './pages/DashBoard/AllUsers';
 import RequireAdmin from './pages/Shared/RequireAdmin';
+import TrackOrder from './pages/DashBoard/TrackOrder';
+import AllProducts from './pages/Products/AllProducts';
 
 
 function App() {
@@ -43,10 +45,12 @@ function App() {
             </RequireAdmin>
           }></Route>
         </Route>
+        <Route path='/allProducts' element={<AllProducts></AllProducts>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
+        <Route path='/trackOrder' element={<TrackOrder></TrackOrder>}></Route>
         <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
       </Routes>
       <Footer></Footer>

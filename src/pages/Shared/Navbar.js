@@ -17,6 +17,7 @@ const Navbar = () => {
 
     const navMenu = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/allProducts">Tools</Link></li>
         <li> {user && <Link to="/dashboard">Dashboard</Link>} </li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li> {user && <p className='font-bold'>{user?.displayName}</p>} </li>
