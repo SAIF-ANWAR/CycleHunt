@@ -35,9 +35,12 @@ const Purchase = () => {
         const totalQuantity = product.quantity
         const orderedQuantity = parseFloat(currentQuantity)
         const quantity = totalQuantity - orderedQuantity
+        const image = product?.img
+        const phone = event.target?.phone.value
         const data = {
-            productName, buyer, email, orderedQuantity, address
+            productName, buyer, email, orderedQuantity, address, image, phone
         }
+        console.log(data)
         const url = `https://fathomless-brushlands-38249.herokuapp.com/orders`
         fetch(url, {
             method: "POST",
@@ -111,6 +114,12 @@ const Purchase = () => {
                                             <span className="label-text">Your Email</span>
                                         </label>
                                         <input type="email" value={user?.email} name="email" placeholder="Your Name" className="input input-bordered" readOnly />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Phone Number</span>
+                                        </label>
+                                        <input type="number" name="phone" placeholder="phone number" className="input input-bordered" />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">

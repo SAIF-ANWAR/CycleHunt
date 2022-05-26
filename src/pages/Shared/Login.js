@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from './Loading';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -51,8 +52,7 @@ const Login = () => {
                         <input className="btn btn-outline btn-success w-full max-w-xs my-2" type="submit" value="Log In" />
                     </form>
                     <small><p className='flex justify-between px-3 '>New to this site ? <Link className='text-primary' to="/signup">Sign Up</Link> </p></small>
-                    <div className="divider ">OR</div>
-                    <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-success text-center">Continue with Google</button>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>

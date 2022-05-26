@@ -9,6 +9,7 @@ import banner from '../../photos/banner-2.jpg'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import SocialLogin from './SocialLogin';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -39,11 +40,26 @@ const SignUp = () => {
         else {
             await createUserWithEmailAndPassword(data.email, data.password)
             await updateProfile({ displayName: data?.name })
+            const userName = data?.name
+            const userEmail = data?.email
+            const user = {
+                userName,
+                userEmail
+            }
+            // https://fathomless-brushlands-38249.herokuapp.com/users
+            fetch('https://fathomless-brushlands-38249.herokuapp.com/users', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
             navigate("/")
         }
-        console.log(data)
+
     };
-    // console.log(user)
 
     return (
         <div style={{ background: `url(${banner})`, backgroundSize: 'cover' }} className='h-screen flex flex-col-1 justify-center items-center'>
@@ -67,8 +83,7 @@ const SignUp = () => {
                         <input className="btn btn-outline btn-success w-full max-w-xs my-2" type="submit" value="Sign Up" />
                     </form>
                     <small><p className='flex justify-between px-3 '>Already have an account ? <Link className='text-primary' to="/login">Log In</Link> </p></small>
-                    <div className="divider ">OR</div>
-                    <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-success text-center">Continue with Google</button>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
             <ToastContainer />

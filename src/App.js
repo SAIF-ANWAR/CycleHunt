@@ -13,6 +13,12 @@ import RequireAuth from './pages/Shared/RequireAuth';
 import MyProfile from './pages/DashBoard/MyProfile';
 import MyOrders from './pages/DashBoard/MyOrders';
 import AddReview from './pages/DashBoard/AddReview';
+import AllOrders from './pages/DashBoard/AllOrders';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AllUsers from './pages/DashBoard/AllUsers';
+import RequireAdmin from './pages/Shared/RequireAdmin';
+
 
 function App() {
   return (
@@ -20,10 +26,22 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/dashboard' element={<DashBoard></DashBoard>}>
+        <Route path='/dashboard' element={<RequireAuth>
+          <DashBoard></DashBoard>
+        </RequireAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
+          <Route path='allorders' element={
+            <RequireAdmin>
+              <AllOrders></AllOrders>
+            </RequireAdmin>
+          }></Route>
+          <Route path='allusers' element={
+            <RequireAdmin>
+              <AllUsers></AllUsers>
+            </RequireAdmin>
+          }></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
@@ -32,6 +50,7 @@ function App() {
         <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
