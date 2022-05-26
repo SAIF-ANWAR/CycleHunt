@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">Cycle Hunt</h1>
+                    <h1 className="mb-5  "><span className='text-5xl font-bold'>Cycle</span> <span className='text-purple-700 font-bold text-6xl'>Hunt</span></h1>
                     <p className="mb-5">The most trusted BiCycle parts Shop   <br /> You will find all kinds of parts for your bike stores here!! </p>
                     <PrimaryButton>Learn More</PrimaryButton>
                 </div>

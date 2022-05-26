@@ -23,6 +23,7 @@ import AllProducts from './pages/Products/AllProducts';
 import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
 import AddProduct from './pages/DashBoard/AddProducts/AddProduct';
 import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
+import NotFound from './pages/Shared/NotFound';
 
 
 
@@ -69,6 +70,7 @@ function App() {
         <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
         <Route path='/trackOrder' element={<TrackOrder></TrackOrder>}></Route>
         <Route path='/comingSoon' element={<ComingSoon></ComingSoon>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

@@ -1,6 +1,10 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const MyPortfolio = () => {
+    const handleWishButton = () => {
+        toast.success("Thank You So Much !!!")
+    }
     return (
         <div class="card w-2/3 mx-auto bg-base-100 shadow-xl">
             <div class="card-body">
@@ -19,7 +23,7 @@ const MyPortfolio = () => {
                 <p>Computer Store:  <a class="link link-secondary">https://inventory-a416f.web.app/</a></p>
                 <p>Travel Bangladesh: <a class="link link-secondary">https://lovely-choux-13e9e6.netlify.app/</a></p>
                 <div class="card-actions justify-center py-2">
-                    <button class="btn btn-primary">Wish you all the best</button>
+                    <button onClick={handleWishButton} class="btn btn-primary">Wish you all the best</button>
                 </div>
             </div>
         </div>

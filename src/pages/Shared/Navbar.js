@@ -6,7 +6,7 @@ import { signOut } from 'firebase/auth';
 import Loading from './Loading';
 
 const Navbar = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
 
     const logOut = () => {
         signOut(auth)
@@ -35,7 +35,7 @@ const Navbar = () => {
                         {navMenu}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">CycleHunt</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl">Cycle <span className='text-purple-700  font-bold'>Hunt</span> </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal py-2">
