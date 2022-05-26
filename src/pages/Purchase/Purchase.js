@@ -1,6 +1,6 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import PrimaryButton from '../Shared/PrimaryButton';
@@ -11,6 +11,7 @@ import { ToastContainer } from 'react-toastify';
 const Purchase = () => {
     const [user] = useAuthState(auth)
     const { id } = useParams()
+    const navigate = useNavigate()
     const { data: product, isLoading, refetch } = useQuery('available', () => fetch(`https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`).then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
@@ -30,7 +31,6 @@ const Purchase = () => {
         const data = {
             productName, buyer, email, orderedQuantity, address, image, phone
         }
-        console.log(data)
         const url = `https://fathomless-brushlands-38249.herokuapp.com/orders`
         fetch(url, {
             method: "POST",

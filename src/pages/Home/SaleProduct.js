@@ -12,7 +12,7 @@ const SaleProduct = ({ tool }) => {
             <figure><img className='w-40 py-4 max-h-[11rem] min-h-[11rem] lg:max-h-[16rem] lg:min-h-[15rem]' src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title"> {name}
-                    <div class="badge badge-secondary">Sale!</div>
+                    <div className="badge badge-secondary">Sale!</div>
                 </h2>
                 <p> {description} </p>
                 <p>Price/piece: ${price} </p>

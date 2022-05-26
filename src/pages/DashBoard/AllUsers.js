@@ -10,8 +10,8 @@ const AllUsers = () => {
     }
     return (
         <div>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -22,7 +22,7 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            users?.map(user => <User key={user._id} user={user} refetch={refetch}></User>)
+                            users?.map((user, index) => <User index={index} key={user._id} user={user} refetch={refetch}></User>)
                         }
 
                     </tbody>

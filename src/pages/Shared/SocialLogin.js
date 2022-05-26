@@ -1,8 +1,8 @@
 import React from 'react';
 import auth from '../../firebase.init';
-import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from './Loading';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -31,15 +31,12 @@ const SocialLogin = () => {
 
     const handleSocialLogIn = () => {
         signInWithGoogle()
-        // const userName = gUser?.user?.displayName
-        // const userEmail = gUser?.user?.email
         const userName = gUser?.user?.displayName
         const userEmail = gUser?.user?.email
         let user = {
             userName,
             userEmail
         }
-        console.log(user)
         fetch(`https://fathomless-brushlands-38249.herokuapp.com/users`, {
             method: "POST",
             headers: {

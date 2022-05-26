@@ -3,7 +3,7 @@ import useProduct from '../../hooks/useProduct';
 import Tool from '../Home/Tools/Tool';
 
 const Products = () => {
-    const [tools, setTools] = useProduct()
+    const [tools] = useProduct()
     return (
         <div>
             <h1 className='text-4xl font-bold text-center pt-5 text-primary mb-6'>Products</h1>

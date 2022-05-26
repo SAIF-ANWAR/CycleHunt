@@ -1,26 +1,36 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const ModalForDelete = ({ tool, setTools }) => {
-    const handleDelete = (id) => {
-        const url = `https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`
-        console.log(url)
-        // fetch(`https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`)
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
+const ModalForDelete = ({ tools, modal, setTools }) => {
+
+    const handleDelete = () => {
+        const url = (`https://fathomless-brushlands-38249.herokuapp.com/parts/${modal}`)
+        fetch(url, {
+            method: "DELETE",
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    toast.success("Deleted Successfully")
+                }
+                const remainingItems = tools?.filter(tool => tool._id !== modal)
+                setTools(remainingItems)
+            })
+
     }
 
     return (
         <div>
-            <input type="checkbox" id="delete-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete?   </h3>
-                    <div class="modal-action">
-                        <label onClick={() => handleDelete(tool?._id)} for="delete-modal" class="btn">Delete Now</label>
+            <input type="checkbox" id="delete-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete?   </h3>
+                    <div className="modal-action">
+                        <label onClick={handleDelete} htmlFor="delete-modal" className="btn">Delete Now</label>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

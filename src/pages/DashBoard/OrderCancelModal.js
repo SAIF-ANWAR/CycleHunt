@@ -18,13 +18,13 @@ const OrdereCancelModal = ({ order, refetch }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="cancel-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete?</h3>
+            <input type="checkbox" id="cancel-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete?</h3>
                     <p> <span className='text-lg'>Item:</span>  <span className='text-xl font-bold'>{order?.productName}</span> </p>
-                    <div class="modal-action">
-                        <label onClick={() => handleDelete(order?._id)} for="cancel-modal" class="btn">Cancel Order</label>
+                    <div className="modal-action">
+                        <label onClick={() => handleDelete(order?._id)} for="cancel-modal" className="btn">Cancel Order</label>
                     </div>
                 </div>
             </div>

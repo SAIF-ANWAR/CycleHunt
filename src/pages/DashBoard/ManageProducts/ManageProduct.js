@@ -1,8 +1,10 @@
 import React from 'react';
 
-const ManageProduct = ({ tool }) => {
+const ManageProduct = ({ tool, setModal }) => {
     const { name, description, quantity, minOrder, img, price } = tool
-
+    const handleModal = (id) => {
+        setModal(id)
+    }
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
@@ -10,15 +12,14 @@ const ManageProduct = ({ tool }) => {
             <div className="card-body">
                 <h2 className="card-title"> {name} </h2>
                 <p> {description} </p>
-                <p>Price/piece: ${price} </p>
+                <p>Unit Price: ${price} </p>
                 <p>Available Quantity: {quantity <= 0 ? "Stock Out" : quantity} </p>
                 <p> MOQ: {minOrder} </p>
                 <div className="card-actions justify-end">
-                    <label for="delete-modal" class="btn btn-sm modal-button">Delete Product</label>
-                    {/* <button className='btn btn-outline' onClick={() => handleOrder(tool._id)}>Delete</button> */}
+                    <label onClick={() => handleModal(tool?._id)} htmlFor="delete-modal" className="btn btn-sm modal-button">Delete Product</label>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

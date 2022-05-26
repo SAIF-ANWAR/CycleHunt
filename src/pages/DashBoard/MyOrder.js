@@ -24,10 +24,10 @@ const MyOrder = ({ order, refetch }) => {
     }
     return (
         <div>
-            <div class="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img className='w-36 py-4 max-h-[11rem] min-h-[11rem] lg:max-h-[15rem] lg:min-h-[15rem]' src={order?.image} alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">
+                <div className="card-body">
+                    <h2 className="card-title">
                         Order Summary
                     </h2>
                     <p>Product: {order?.productName}</p>
@@ -37,14 +37,14 @@ const MyOrder = ({ order, refetch }) => {
                     <p>Shipping Address: {order?.address}</p>
                     <p>Payment Status: {order?.payment ? order?.payment : "Unpaid"} </p>
                     <p>Shipment : {order?.payment === "Paid" ? "On Process" : "Pendnig for payment"}</p>
-                    <div class="card-actions justify-end">
-                        {order?.payment === "Paid" ? <Link to="/trackOrder" class="btn btn-sm">Track Order</Link> : <button onClick={() => handlePay(order?._id)} class="btn btn-sm">Pay</button>}
-                        <label for="cancel-modal" disabled={order?.payment === "Paid"} class="btn btn-sm modal-button">Cancel Order</label>
+                    <div className="card-actions justify-end">
+                        {order?.payment === "Paid" ? <Link to="/trackOrder" className="btn btn-sm">Track Order</Link> : <button onClick={() => handlePay(order?._id)} className="btn btn-sm">Pay</button>}
+                        <label htmlFor="cancel-modal" disabled={order?.payment === "Paid"} className="btn btn-sm modal-button">Cancel Order</label>
 
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

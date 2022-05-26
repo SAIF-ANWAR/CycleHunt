@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+
+Live Site  [Create React App](https://github.com/facebook/create-react-app).
+
+This website is about B2B marketplace where buyers purchase cycle parts in bulk
+The home page includes 6 sections.
+User can directly order by clicking order now button.
+There is also an admin panel where admin can access of deleting, modifying status of products
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

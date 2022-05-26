@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { updateProfile } from 'firebase/auth';
 import Loading from './Loading';
 import banner from '../../photos/banner-2.jpg'
 import { toast } from 'react-toastify';
@@ -21,7 +20,7 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     if (loading || gLoading || updating) {
@@ -46,7 +45,6 @@ const SignUp = () => {
                 userName,
                 userEmail
             }
-            // https://fathomless-brushlands-38249.herokuapp.com/users
             fetch('https://fathomless-brushlands-38249.herokuapp.com/users', {
                 method: "POST",
                 headers: {
