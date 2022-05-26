@@ -7,12 +7,11 @@ import Loading from './Loading';
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
-
-    const logOut = () => {
-        signOut(auth)
-    }
     if (loading) {
         return <Loading></Loading>
+    }
+    const logOut = () => {
+        signOut(auth)
     }
 
     const navMenu = <>
@@ -24,6 +23,9 @@ const Navbar = () => {
         <li> {user && <p className='font-bold'>{user?.displayName}</p>} </li>
         <li>{user ? <button onClick={logOut} className="btn btn-ghost">Log Out</button> : <Link to="/login">Login</Link>}</li>
     </>
+
+
+
     return (
         <div className="navbar bg-base-100 px-20 ">
             <div className="navbar-start">
