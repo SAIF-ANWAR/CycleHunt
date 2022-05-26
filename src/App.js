@@ -20,6 +20,10 @@ import AllUsers from './pages/DashBoard/AllUsers';
 import RequireAdmin from './pages/Shared/RequireAdmin';
 import TrackOrder from './pages/DashBoard/TrackOrder';
 import AllProducts from './pages/Products/AllProducts';
+import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
+import AddProduct from './pages/DashBoard/AddProducts/AddProduct';
+import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
+
 
 
 function App() {
@@ -44,7 +48,20 @@ function App() {
               <AllUsers></AllUsers>
             </RequireAdmin>
           }></Route>
+          <Route path='manageProducts' element={
+            <RequireAdmin>
+              <ManageProducts></ManageProducts>
+            </RequireAdmin>
+          }></Route>
+          <Route path='addProduct' element={
+            <RequireAdmin>
+              <AddProduct></AddProduct>
+            </RequireAdmin>
+          }></Route>
+
         </Route>
+
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/allProducts' element={<AllProducts></AllProducts>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

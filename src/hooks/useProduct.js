@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
+import { useQuery } from "react-query"
 
 const useProduct = () => {
+
     const [tools, setTools] = useState([])
     useEffect(() => {
         fetch('https://fathomless-brushlands-38249.herokuapp.com/parts')
@@ -8,5 +10,6 @@ const useProduct = () => {
             .then(data => setTools(data))
     }, [])
     return [tools, setTools]
+
 }
 export default useProduct

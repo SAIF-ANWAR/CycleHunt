@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import OrdereCancelModal from './OrderCancelModal';
 
 const MyOrder = ({ order, refetch }) => {
 
@@ -23,24 +22,6 @@ const MyOrder = ({ order, refetch }) => {
                 refetch()
             })
     }
-    const handleDelete = (id) => {
-
-        // const proceed = window.confirm("Are You sure")
-        // if (proceed) {
-        //     fetch(`https://fathomless-brushlands-38249.herokuapp.com/orders/${id}`, {
-        //         method: "DELETE"
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             if (data.acknowledged === true) {
-        //                 toast.success("Order Cancelled")
-        //             }
-        //             refetch()
-        //             console.log(data)
-        //         })
-        // }
-
-    }
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
@@ -54,7 +35,7 @@ const MyOrder = ({ order, refetch }) => {
                     <p>Email: {order?.email}</p>
                     <p>Phone Number: {order?.phone}</p>
                     <p>Shipping Address: {order?.address}</p>
-                    <p>Payment Status: {order?.payment ? order?.payment : "Pending"} </p>
+                    <p>Payment Status: {order?.payment ? order?.payment : "Unpaid"} </p>
                     <p>Shipment : {order?.payment === "Paid" ? "On Process" : "Pendnig for payment"}</p>
                     <div class="card-actions justify-end">
                         {order?.payment === "Paid" ? <Link to="/trackOrder" class="btn btn-sm">Track Order</Link> : <button onClick={() => handlePay(order?._id)} class="btn btn-sm">Pay</button>}

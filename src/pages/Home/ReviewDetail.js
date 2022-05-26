@@ -11,10 +11,9 @@ const ReviewDetail = ({ review }) => {
                 </div>
             </figure>
             <div class="card-body items-center text-center">
-                <h2 class="card-title"> { } </h2>
+                <h2 class="card-title font-bold"> {review?.name} </h2>
                 <p>"{review?.review}"</p>
-                <p>Ratng: {review?.rating} out of 5 </p>
-                <p>Reviewed By: {review?.name}</p>
+                <p><span className='font-bold'>Ratng:</span> {review?.rating} out of 5 </p>
             </div>
         </div>
     );

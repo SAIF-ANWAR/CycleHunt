@@ -3,16 +3,11 @@ import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
 
 const MyProfile = () => {
     const [user, loading, error] = useAuthState(auth);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    // const { data: userProfile, isLoading, refetch } = useQuery('available', () => fetch(`https://fathomless-brushlands-38249.herokuapp.com/profiles/${user?.email}`).then(res => res.json()))
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
+
     const onSubmit = data => {
         fetch('https://fathomless-brushlands-38249.herokuapp.com/profiles', {
             method: "POST",

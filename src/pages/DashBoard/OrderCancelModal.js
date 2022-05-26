@@ -3,8 +3,6 @@ import { toast } from 'react-toastify';
 
 const OrdereCancelModal = ({ order, refetch }) => {
     const handleDelete = (id) => {
-
-
         fetch(`https://fathomless-brushlands-38249.herokuapp.com/orders/${id}`, {
             method: "DELETE"
         })

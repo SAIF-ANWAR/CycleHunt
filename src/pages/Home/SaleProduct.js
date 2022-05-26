@@ -1,10 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Tool = ({ tool }) => {
+const SaleProduct = ({ tool }) => {
     const { name, description, quantity, minOrder, img, price } = tool
     const navigate = useNavigate()
-
     const handleOrder = (id) => {
         navigate(`/purchase/${id}`)
     }
@@ -12,7 +11,9 @@ const Tool = ({ tool }) => {
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img className='w-40 py-4 max-h-[11rem] min-h-[11rem] lg:max-h-[16rem] lg:min-h-[15rem]' src={img} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title"> {name} </h2>
+                <h2 className="card-title"> {name}
+                    <div class="badge badge-secondary">Sale!</div>
+                </h2>
                 <p> {description} </p>
                 <p>Price/piece: ${price} </p>
                 <p>Available Quantity: {quantity <= 0 ? "Stock Out" : quantity} </p>
@@ -25,4 +26,4 @@ const Tool = ({ tool }) => {
     );
 };
 
-export default Tool;
+export default SaleProduct;

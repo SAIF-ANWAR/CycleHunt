@@ -3,144 +3,108 @@
         "id": 1,
         "name": "Bottom Bracket",
         "img": "https://i.ibb.co/gF7b4Cx/bottom-bracket.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "The bottom bracket is held inside the part of the frame called the bottom bracket shell. With use, the bearings will wear out and require replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 2,
         "name": "Cassette",
         "img": "https://i.ibb.co/qNzKR6B/cassette.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "A fast and convenient tool to remove and install 12-spline Shimano®/SRAM® style cassette lockrings, as well as similar lockrings on rotor discs ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": " ",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 3,
         "name": "Chain",
         "img": "https://i.ibb.co/2jmBpB2/chain.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 12,
         "name": "Charger",
         "img": "https://i.ibb.co/mv7DHZj/charger.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement.  ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 4,
         "name": "Disc Brake",
         "img": "https://i.ibb.co/RCrvkyB/discbrake.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 5,
         "name": "Disk Rotor",
         "img": "https://i.ibb.co/NZmhHDm/discrotor.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 6,
         "name": "Frame",
         "img": "https://i.ibb.co/n1SXC4M/frame.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 7,
         "name": "Pedal",
         "img": "https://i.ibb.co/BZjS630/pedal.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement.  ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 8,
         "name": "Pedal Cleets",
         "img": "https://i.ibb.co/qdx4qfW/pedal-cleets.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 9,
         "name": "Saddle",
         "img": "https://i.ibb.co/Bs3Bhj6/saddle.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 10,
         "name": "Tyre",
         "img": "https://i.ibb.co/xjY4DyL/tyre.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement. ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     },
     {
         "id": 11,
         "name": "Zipp",
         "img": "https://i.ibb.co/Th1W7Qg/zipp.jpg",
-        "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or ",
+        "description": "To alleviate poor shifting and uneven drive train wear, manufacturers recommend chain replacement before rear cog replacement.  ",
         "quantity": 100,
         "minOrder": 20,
-        "price": 20,
-        "payment": "",
-        "availableQuantity": "",
-        "stock": ""
+        "price": 20
     }
 ]

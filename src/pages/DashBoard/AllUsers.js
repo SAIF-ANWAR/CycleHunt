@@ -22,7 +22,7 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map(user => <User key={user._id} user={user} refetch={refetch}></User>)
+                            users?.map(user => <User key={user._id} user={user} refetch={refetch}></User>)
                         }
 
                     </tbody>

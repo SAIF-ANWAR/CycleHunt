@@ -2,6 +2,9 @@ import React from 'react';
 
 const OrderDetail = ({ order }) => {
 
+    const handleShipment = () => {
+
+    }
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
@@ -16,8 +19,10 @@ const OrderDetail = ({ order }) => {
                     <p>Email: {order?.email}</p>
                     <p>Phone Number: {order?.phone}</p>
                     <p>Shipping Address: {order?.address}</p>
+                    <p>Payment : {order?.payment ? order?.payment : "Unpaid"} </p>
+                    <p>Status: { } </p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-sm">Pay</button>
+                        <button class="btn btn-sm">Shipped</button>
                         <button class="btn btn-sm">Cancel Order</button>
                     </div>
                 </div>

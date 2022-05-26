@@ -8,19 +8,10 @@ import PrimaryButton from '../Shared/PrimaryButton';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import useProduct from '../../hooks/useProduct';
 
 const Purchase = () => {
     const [user] = useAuthState(auth)
     const { id } = useParams()
-    // const [product, setProduct] = useState({})
-    // useEffect(() => {
-    //     const url = `https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setProduct(data))
-    // }, [id])
-
     const { data: product, isLoading, refetch } = useQuery('available', () => fetch(`https://fathomless-brushlands-38249.herokuapp.com/parts/${id}`).then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
@@ -84,12 +75,11 @@ const Purchase = () => {
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content w-2/3 flex-col lg:flex-row-reverse justify-items-center">
-                    <div className="text-center lg:text-left">
-                        <img className='max-h-64' src={product?.img} alt="" />
-                        <p>Available Quantity: {product?.quantity <= 0 ? "Stoc Out" : product?.quantity}</p>
+                    <div className="text-center lg:text-left p-3">
+                        <img className='max-h-64 mb-8' src={product?.img} alt="" />
+                        <p>Available Quantity: {product?.quantity <= 0 ? "Stock Out" : product?.quantity}</p>
                         <p>Price: $ {product?.price}</p>
                         <p>Shipping Cost: $ 20</p>
-                        <p>Total Cost: 2000</p>
                     </div>
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
